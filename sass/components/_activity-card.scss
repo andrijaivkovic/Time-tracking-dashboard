@@ -1,0 +1,146 @@
+.activity-card {
+  border-radius: 20px;
+
+  &__header {
+    position: relative;
+
+    height: 5.5rem;
+    width: 100%;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    margin-bottom: -1.25rem;
+
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: bottom -15px right 20px;
+
+    z-index: 100;
+
+    @include mediaQuery(desktop) {
+      background-position: bottom -5px right 20px;
+    }
+
+    &--work {
+      background-color: $color-primary-light-orange;
+      background-image: url("../images/icon-work.svg");
+    }
+
+    &--play {
+      background-color: $color-primary-soft-blue;
+      background-image: url("../images/icon-play.svg");
+    }
+
+    &--study {
+      background-color: $color-primary-light-red;
+      background-image: url("../images/icon-study.svg");
+    }
+
+    &--exercise {
+      background-color: $color-primary-lime-green;
+      background-image: url("../images/icon-exercise.svg");
+      background-position: bottom 0 right 20px;
+
+      @include mediaQuery(desktop) {
+        background-position: bottom 10px right 20px;
+      }
+    }
+
+    &--social {
+      background-color: $color-primary-violet;
+      background-image: url("../images/icon-social.svg");
+      background-position: bottom -40px right 20px;
+
+      @include mediaQuery(desktop) {
+        background-position: bottom -20px right 20px;
+      }
+    }
+
+    &--self-care {
+      background-color: $color-primary-soft-orange;
+      background-image: url("../images/icon-self-care.svg");
+
+      @include mediaQuery(desktop) {
+        background-position: bottom right 20px;
+      }
+    }
+  }
+
+  &__stats {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, auto);
+
+    align-items: center;
+
+    row-gap: 0.5rem;
+
+    padding: 2.5rem;
+    padding-bottom: 3rem;
+
+    border-radius: 15px;
+    background-color: $color-neutral-dark-blue;
+
+    z-index: 200;
+
+    transition: background-color 0.2s;
+
+    cursor: pointer;
+
+    @include mediaQuery(desktop) {
+      row-gap: 1.5rem;
+    }
+
+    &:hover {
+      background-color: #34397b;
+    }
+  }
+
+  &__activity-type {
+    font-size: 1.8rem;
+
+    justify-self: start;
+  }
+
+  &__dots {
+    padding: 1rem;
+
+    filter: invert(85%) sepia(35%) saturate(4427%) hue-rotate(193deg)
+      brightness(108%) contrast(106%);
+
+    justify-self: end;
+    cursor: pointer;
+
+    &:hover {
+      filter: invert(100%) sepia(0%) saturate(3372%) hue-rotate(295deg)
+        brightness(116%) contrast(100%);
+    }
+  }
+
+  &__activity-time-current {
+    font-size: 3rem;
+    font-weight: 300;
+
+    justify-self: start;
+
+    @include mediaQuery(desktop) {
+      grid-column: 1 / -1;
+      font-size: 4.8rem;
+    }
+  }
+
+  &__activity-time-previous {
+    font-size: 1.4rem;
+    color: $color-neutral-pale-blue;
+
+    justify-self: end;
+
+    @include mediaQuery(desktop) {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+  }
+}

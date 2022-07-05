@@ -1,0 +1,27 @@
+.time-tracking {
+  display: grid;
+  row-gap: 3rem;
+
+  width: 100%;
+  max-width: 35rem;
+
+  @include mediaQuery(desktop) {
+    grid-template-columns: 22.5rem max-content;
+
+    column-gap: 3rem;
+
+    justify-content: center;
+
+    max-width: unset;
+  }
+}
+
+.activity-card-container {
+  display: grid;
+  gap: 3rem;
+
+  @include mediaQuery(desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 25rem);
+  }
+}

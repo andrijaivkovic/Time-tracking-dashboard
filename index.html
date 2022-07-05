@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="sass/main.scss" />
+    <script defer type="module" src="./script.js"></script>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <section class="time-tracking">
+      <div class="profile-card">
+        <div class="profile-card__details">
+          <img
+            class="profile-card__user-picture"
+            src="./images/image-jeremy.png"
+            alt="Jeremy Robson Profile Picture"
+          />
+          <div class="profile-card__text">
+            <p class="profile-card__report-for">Report for</p>
+            <p class="profile-card__user-name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="profile-card__time-frame-selection">
+          <button data-time-frame="daily" class="profile-card__button">
+            Daily
+          </button>
+          <button
+            data-time-frame="weekly"
+            class="profile-card__button profile-card__button--active"
+          >
+            Weekly
+          </button>
+          <button data-time-frame="monthly" class="profile-card__button">
+            Monthly
+          </button>
+        </div>
+      </div>
+      <div class="activity-card-container"></div>
+    </section>
+  </body>
+</html>

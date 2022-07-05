@@ -1,0 +1,87 @@
+.profile-card {
+  @include flex-column;
+  background-color: $color-neutral-dark-blue;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__details {
+    @include flex-row;
+    gap: 2rem;
+
+    align-items: center;
+
+    padding: 3rem;
+
+    background-color: $color-primary-blue;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @include mediaQuery(desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 3.5rem;
+
+      flex: 1;
+    }
+  }
+
+  &__user-picture {
+    height: 7rem;
+    box-sizing: content-box;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+
+  &__text {
+    @include flex-column;
+    gap: 0.5rem;
+  }
+
+  &__report-for {
+    font-size: 1.4rem;
+    color: $color-neutral-pale-blue;
+  }
+
+  &__user-name {
+    font-size: 2.2rem;
+    font-weight: 300;
+
+    @include mediaQuery(desktop) {
+      font-size: 3rem;
+    }
+  }
+
+  &__time-frame-selection {
+    @include flex-row;
+    justify-content: space-evenly;
+    padding: 1.5rem 1rem;
+
+    @include mediaQuery(desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  &__button {
+    padding: 1rem;
+
+    font-size: 1.8rem;
+    color: $color-neutral-desaturated-blue;
+
+    transition: color 0.15s;
+
+    cursor: pointer;
+
+    &--active {
+      color: #fff;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

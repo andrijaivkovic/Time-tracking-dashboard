@@ -72,16 +72,24 @@
     font-size: 1.8rem;
     color: $color-neutral-desaturated-blue;
 
-    transition: color 0.15s;
-
     cursor: pointer;
+
+    transition: padding-left 0.15s ease-out, color 0.15s ease-out;
 
     &--active {
       color: #fff;
+
+      &:hover {
+        color: #fff !important;
+      }
     }
 
     &:hover {
-      color: #fff;
+      color: $color-neutral-pale-blue;
+
+      @include mediaQuery(desktop) {
+        padding-left: 1.5rem;
+      }
     }
   }
 }
